@@ -254,6 +254,7 @@ NSString const *CWPopupViewOffset = @"CWPopupViewOffset";
             } else {
                 fadeView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);
             }
+            fadeView.frame = CGRectOffset(fadeView.frame, viewControllerToPresent.popupViewOffset.x, viewControllerToPresent.popupViewOffset.y);
             fadeView.backgroundColor = [UIColor blackColor];
             fadeView.alpha = 0.0f;
             [self.view addSubview:fadeView];
